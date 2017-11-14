@@ -47,7 +47,7 @@ public class CityDAO {
 	            cty.setReg_code(rs.getString("reg_code"));
 	            cty.setCty_name(rs.getString("cty_name"));
 	            cty.setPopulation(rs.getInt("population"));
-	            cty.setCoastal(rs.getBoolean("isCoastal"));
+	            cty.	setIsCoastal(rs.getString("isCoastal"));
 	            cty.setAreaKM(rs.getDouble("areaKM"));
 	            
 	            cities.add(cty);

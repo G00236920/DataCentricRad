@@ -7,10 +7,10 @@ public class City {
 	private String reg_code; 
 	private String cty_name; 
 	private int population; 
-	private boolean isCoastal; 
+	private String isCoastal; 
 	private double areaKM;
 	
-	public City(String cty_code, String co_code, String reg_code, String city_name, int population,boolean isCoastal, double areaKM)
+	public City(String cty_code, String co_code, String reg_code, String city_name, int population,String isCoastal, double areaKM)
 	{
 		
 		this.cty_code = cty_code; 
@@ -66,11 +66,11 @@ public class City {
 		this.population = population;
 	}
 
-	public boolean isCoastal() {
+	public String getIsCoastal() {
 		return isCoastal;
 	}
 
-	public void setCoastal(boolean isCoastal) {
+	public void setIsCoastal(String isCoastal) {
 		this.isCoastal = isCoastal;
 	}
 
