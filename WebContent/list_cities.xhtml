@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" 
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+	
+	
+<h:head>
+	<title>Geography DB</title>
+</h:head>
+<h:body>
+
+	<ui:composition template="layout.xhtml">
+	
+		<ui:define name="content">
+			
+			<div id="adddialog" title="Add Country"></div>
+			
+			<div class="panel panel-primary">
+				
+				<div class="panel-heading">
+				
+					<h2>Cities</h2>
+					
+				</div>
+				
+				<div class="panel-body">
+
+					<h:dataTable value="#{citiesController.cities}" var="city" styleClass="table table-striped table-bordered" headerClass="thead-inverse" rowClasses="" id="citytable">
+					
+					<h:column>
+							<f:facet name="header">City Code</f:facet>
+							#{city.cty_code}
+        				</h:column>
+        				
+        				<h:column>
+							<f:facet name="header">Country Code</f:facet>
+							#{city.co_code}
+        				</h:column>
+
+        				<h:column>
+							<f:facet name="header">Region Code</f:facet>
+							#{city.reg_code}
+        				</h:column>
+        				
+        				<h:column>
+							<f:facet name="header">City Name</f:facet>
+							#{city.cty_name}
+        				</h:column>
+        				
+        				<h:column>
+							<f:facet name="header">Population</f:facet>
+							#{city.population}
+        				</h:column>
+        				
+        				<!--  <h:column>
+							<f:facet name="header">By the Sea</f:facet>
+							#{city.isCoastal}
+        				</h:column>-->
+        				
+        				<h:column>
+							<f:facet name="header">Area</f:facet>
+							#{city.areaKM}
+        				</h:column>
+						
+					</h:dataTable>
+					
+				</div>
+				
+			</div>
+			
+		</ui:define>
+		
+		<ui:define name="navbutton">
+		
+			<h:link value="Home" outcome="index" styleClass="btn btn-default" />
+			
+		</ui:define>
+		
+	</ui:composition>
+</h:body>
+</html>
