@@ -33,7 +33,6 @@ public class CityDAO {
 			   
 			   conn = mysqlDS.getConnection();
 
-
 			   st = conn.createStatement();
 			   
 			   rs = st.executeQuery("select * from city;");
